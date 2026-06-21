@@ -1,0 +1,504 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Praveen | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(
+        135deg,
+        #0F172A,
+        #1E293B,
+        #111827
+    );
+    color:#E2E8F0;
+}
+
+/* Header */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 10%;
+    background:#0F172A;
+    box-shadow:0 0 20px rgba(56,189,248,.3);
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#38BDF8;
+    text-shadow:0 0 20px #38BDF8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-size:17px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38BDF8;
+}
+
+/* Hero Section */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:120px 10%;
+}
+
+.hero-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    width:100%;
+}
+
+.hero-image img{
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #38BDF8;
+    box-shadow:0 0 30px rgba(56,189,248,.6);
+}
+
+.hero-text h1{
+    font-size:60px;
+    color:#38BDF8;
+}
+
+.hero-text h3{
+    margin-top:10px;
+    font-size:28px;
+}
+
+.hero-text p{
+    margin-top:20px;
+    line-height:1.8;
+    color:#CBD5E1;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 35px;
+    background:#38BDF8;
+    color:#0F172A;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#60A5FA;
+    box-shadow:0 0 25px #38BDF8;
+}
+
+/* Sections */
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    color:#38BDF8;
+    margin-bottom:50px;
+}
+
+.box,
+.skill-card,
+.project-card,
+.contact-box,
+.timeline-item{
+    background:#1E293B;
+    border:1px solid rgba(56,189,248,.4);
+    border-radius:15px;
+}
+
+/* About */
+.box{
+    padding:30px;
+    line-height:1.8;
+}
+
+/* Skills */
+.skill-container{
+    max-width:800px;
+    margin:auto;
+}
+
+.skill{
+    margin-bottom:25px;
+}
+
+.skill p{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+}
+
+.progress{
+    width:100%;
+    height:12px;
+    background:#334155;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress div{
+    height:100%;
+    background:#38BDF8;
+    border-radius:20px;
+}
+
+.python{width:90%;}
+.java{width:70%;}
+.html{width:95%;}
+.javascript{width:55%;}
+.sql{width:65%;}
+.ml{width:50%;}
+
+/* Experience */
+.timeline-item{
+    padding:25px;
+    margin-bottom:20px;
+    border-left:5px solid #38BDF8;
+}
+
+/* Projects */
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    padding:25px;
+    transition:.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(56,189,248,.5);
+}
+
+.project-card h3{
+    color:#38BDF8;
+    margin-bottom:15px;
+}
+
+/* Contact */
+.contact-box{
+    padding:30px;
+    text-align:center;
+}
+
+.contact-box p{
+    margin:15px 0;
+}
+
+.contact-box a{
+    color:#38BDF8;
+    text-decoration:none;
+}
+
+/* Footer */
+footer{
+    background:#0F172A;
+    text-align:center;
+    padding:20px;
+    color:#38BDF8;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.hero-content{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-image img{
+    width:220px;
+    height:220px;
+}
+
+.hero-text h1{
+    font-size:42px;
+}
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav ul li{
+    margin:8px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+
+<div class="logo">Praveen</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Education</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#education">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-image">
+    <img src="profile.jpg" alt="Praveen Profile">
+</div>
+
+<div class="hero-text">
+
+<h1>Praveen Y</h1>
+
+<h3>Computer Science Engineer</h3>
+
+<p>
+Python Developer • Web Developer • AI Enthusiast • Database Management
+</p>
+
+<a href="resume.pdf" class="btn">Download Resume</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- About -->
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="box">
+<p>
+I am a Computer Science and Engineering student passionate about
+software development, artificial intelligence, web technologies,
+database management, and machine learning. I enjoy creating
+innovative applications and solving real-world problems.
+</p>
+</div>
+
+</section>
+
+<!-- Skills -->
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skill-container">
+
+<div class="skill">
+    <p>Python <span>90%</span></p>
+    <div class="progress">
+        <div class="python"></div>
+    </div>
+</div>
+
+<div class="skill">
+    <p>Java <span>70%</span></p>
+    <div class="progress">
+        <div class="java"></div>
+    </div>
+</div>
+
+<div class="skill">
+    <p>HTML & CSS <span>95%</span></p>
+    <div class="progress">
+        <div class="html"></div>
+    </div>
+</div>
+
+<div class="skill">
+    <p>JavaScript <span>55%</span></p>
+    <div class="progress">
+        <div class="javascript"></div>
+    </div>
+</div>
+
+<div class="skill">
+    <p>SQL <span>65%</span></p>
+    <div class="progress">
+        <div class="sql"></div>
+    </div>
+</div>
+
+<div class="skill">
+    <p>Machine Learning <span>50%</span></p>
+    <div class="progress">
+        <div class="ml"></div>
+    </div>
+</div>
+
+</div>
+
+</section>
+<!-- Education -->
+<section id="education">
+
+<h2 class="section-title">Education</h2>
+
+<div class="timeline-item">
+    <h3>B.E Computer Science and Engineering</h3>
+    <p>Anna University</p>
+    <p>2023 - 2027</p>
+</div>
+
+<div class="timeline-item">
+    <h3>Higher Secondary Education (12th)</h3>
+    <p>Your School Name</p>
+    <p>2022 - 2023</p>
+    <p>Percentage : 85%</p>
+</div>
+
+<div class="timeline-item">
+    <h3>SSLC (10th Standard)</h3>
+    <p>Your School Name</p>
+    <p>2020 - 2021</p>
+    <p>Percentage : 88%</p>
+</div>
+
+</section>
+
+
+<!-- Projects -->
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+<h3>AI Movie Recommendation System</h3>
+<p>Developed a recommendation system using machine learning algorithms.</p>
+</div>
+
+<div class="project-card">
+<h3>Stock Price Prediction</h3>
+<p>Built a predictive analytics model using Python and data science.</p>
+</div>
+
+<div class="project-card">
+<h3>Portfolio Website</h3>
+<p>Created a responsive personal portfolio using HTML and CSS.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Experience -->
+<section id="experience">
+
+<h2 class="section-title">Experience</h2>
+
+<div class="timeline-item">
+<h3>Python Developer Intern</h3>
+<p>Worked on backend development, APIs, and database integration.</p>
+</div>
+
+<div class="timeline-item">
+<h3>Web Development Intern</h3>
+<p>Developed responsive websites using HTML, CSS, JavaScript and Bootstrap.</p>
+</div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact-box">
+
+<p><strong>Phone:</strong> +91 9876543210</p>
+
+<p><strong>Email:</strong> praveeny26206@gmail.com</p>
+
+<p>
+<strong>GitHub:</strong>
+<a href="https://github.com/praveeny262006" target="_blank">
+github.com/praveeny262006
+</a>
+</p>
+
+<p>
+<strong>LinkedIn:</strong>
+<a href="#">linkedin.com/in/praveen</a>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Praveen Portfolio | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
+```
